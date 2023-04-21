@@ -1,0 +1,1100 @@
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+/*Deskop*/
+/*LOADER*/
+.conteneur {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1000;
+	background: black;
+	animation: loader 2.8s linear forwards;
+}
+
+@keyframes loader {
+	99.99% {
+		height: 100%;
+		width: 100%;
+	}
+
+	100% {
+		height: 0%;
+		width: 0%;
+	}
+}
+
+.conteneur__loader {
+	width: 230px;
+	height: 230px;
+	position: relative;
+	border-radius: 50%;
+	background: linear-gradient(#9356DC, #99E2D0, #FF79DA);
+	animation: disparait 0.5s ease-in-out forwards 2.3s;
+}
+
+@keyframes disparait {
+	0% {
+		transform: scale(1);
+	}
+
+	50% {
+		transform: scale(1);
+	}
+
+	100% {
+		transform: scale(0);
+	}
+}
+
+.conteneur__loader--filtre {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 2;
+	border-radius: 50%;
+	background: linear-gradient(135deg, #9356DC, #99E2D0, #FF79DA);
+	animation: animate 1.5s linear 2;
+}
+
+@keyframes animate {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.conteneur__loader--filtre:nth-child(1) {
+	filter: blur(0px);
+}
+
+.conteneur__loader--filtre:nth-child(2) {
+	filter: blur(10px);
+}
+
+.conteneur__loader--filtre:nth-child(3) {
+	filter: blur(15px);
+}
+
+.conteneur__loader--filtre:nth-child(4) {
+	filter: blur(25px);
+}
+
+.conteneur__loader--filtre:nth-child(5) {
+	width: unset;
+	height: unset;
+	top: 10px;
+	bottom: 10px;
+	left: 10px;
+	right: 10px;
+	background: black;
+	filter: blur(10px);
+}
+
+.conteneur__loader__texte {
+	height: 40px;
+	position: absolute;
+	top: 95px;
+	left: 33px;
+	z-index: 3;
+	padding-right: 2px;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	border-top-right-radius: 0px;
+	background: linear-gradient(135deg, #9356DC, #99E2D0, #FF79DA);
+	font-family: "Shrikhand", cursive;
+	font-size: 1.9rem;
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+	overflow: hidden;
+}
+
+.conteneur__loader__icone {
+	position: absolute;
+	left: 98.75px;
+	top: 40px;
+	z-index: 4;
+	background: linear-gradient(135deg, #9356DC, #99E2D0, #FF79DA);
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+	font-size: 2.5rem;
+	animation: couvert 2.5s linear forwards;
+}
+
+/*Boite logo page d'accueil*/
+.header {
+	font-family: 'Shrikhand', cursive;
+	text-align: center;
+	box-shadow: 0 0 0.5rem rgb(0 0 0/25%);
+	padding: 0.3rem;
+	margin: 0;
+	position: relative;
+}
+
+/*Body*/
+.body {
+	font-family: Roboto, sans-serif;
+    margin: auto;
+
+}
+
+/*Taille Logo my food,Réserver le menu qui vous convient*/
+.explorer h2 {
+	margin-top: 2rem;
+	font-size: 1.6em;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+/*ce qui englobe:la boite grise de Paris Belleville*/
+main .city {
+	font-family: "roboto", sans-serif;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+	background-color: #f3f3f3;
+	text-align: center;
+	padding: 0.5rem;
+}
+
+/*la boite (Réservé) au (logo explorer)*/
+.explorer {
+	font-family: "roboto", cursive;
+	text-align: center;
+	background: rgb(243, 243, 243);
+	background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(243, 243, 243, 1) 100%);
+	padding: 5px 0px 75px;
+}
+
+/*Découvrez les restaurants d'exception,sélectionnées par nos soins*/
+.tailleLettre {
+	font-size: 20px;
+}
+
+/*bouton Explorer nos restaurants*/
+.explorer button {
+	color: white;
+	font-weight: 300;
+	font-size: 1.5rem;
+	padding: 1rem 2rem;
+	border: none;
+	border-radius: 2rem;
+	box-shadow: 2px 1px 7px -3px black;
+	background-image: linear-gradient(rgba(147, 86, 220, 0.9), rgba(225, 121, 218, 0.9));
+	transition: transform 200ms;
+	margin-top: 20px;
+	display: initial;
+	margin-top: 3rem;
+}
+
+.explorer button:hover {
+	opacity: 0.9;
+	cursor: pointer;
+	animation: mou 0.6s ease-in-out 0.05s 1 forwards;
+}
+
+@keyframes mou {
+	10% {
+		transform: scale3d(0.93, 0.93, 1);
+	}
+
+	40% {
+		transform: scale3d(1, 1, 1);
+	}
+
+	80% {
+		transform: scale3d(0.97, 0.97, 1);
+	}
+
+	100% {
+		transform: scale3d(0.98, 0.98, 1);
+	}
+}
+
+/* Fonctionnement*/
+.spaceF {
+	padding: 40px 0px 0px 4px;
+}
+
+/*configuration liste*/
+.tuto ol {
+	padding-bottom: 38px;
+}
+
+/*3bulles Choisissez un restaurant,Composez votre menu,Déguster au restaurant*/
+.tuto li {
+	padding: 1rem 2rem;
+	flex-grow: 1;
+	background: #f6f6f6;
+	border-radius: 1rem;
+	box-shadow: 2px 4px 9px 0px #e0e1e3;
+	list-style: none;
+	display: flex;
+	align-items: center;
+	height: 38px;
+	margin-bottom: 20px;
+}
+
+/*icones tel,liste et feunetre*/
+.tuto li {
+	list-style: none;
+}
+
+.gris {
+	color: grey;
+}
+
+.icons {
+	margin-right: 10px;
+}
+
+.fa-mobile-alt::before .fa-mobile-screen-button::before {
+	content: "\f3cd"
+}
+
+li:hover .gris,
+li:hover {
+	color: #9356dc;
+}
+
+/*chiffres près des icones 123*/
+.policeNumber {
+	font-family: Arial, sans-serif;
+}
+
+.number {
+	left: 35px;
+	padding-top: 2px;
+	width: 23px;
+	height: 20px;
+	border-radius: 50px;
+	text-align: center;
+	font-size: 0.9em;
+	color: white;
+	background-color: #9356dc;
+	position: absolute;
+	flex-direction: column;
+}
+
+/*partie écriture et espace :Choisissez un restaurant,Composez votre menu,Déguster au restaurant*/
+.espace2 {
+	margin: 17px;
+}
+
+/*Ce qui englobe la partie Restaurant*/
+.menu {
+	margin-top: -4rem;
+	border-radius: 2rem 2rem 0 0;
+	background-color: #f6f6f6;
+	z-index: 1;
+	position: relative;
+}
+
+.menu {
+	background-color: #f3f3f3;
+	padding-bottom: 40px;
+}
+
+.grisClair {
+	background-color: #f3f3f3;
+}
+
+/*L'ensemble des cartes de menu*/
+.menuList {
+	gap: 2rem;
+	flex-direction: row;
+	flex-wrap: wrap;
+	background-color: #f3f3f3;
+	justify-content: space-between;
+	display: grid;
+	grid-template-rows: 410px;
+	grid-template-columns: 2fr 2fr;
+}
+
+/*la partie blanche en dessous de la photo de chaques menus*/
+.card_description {
+	border-radius: 0px 3px 23px 19px;
+	background-color: white;
+	padding: 1px 0px 1px 20px;
+	margin: 0px 0px 20px 0px;
+	box-shadow: 1px 7px 3px 0px lightgrey;
+	color: black;
+}
+
+a.card:visited {
+	color: black;
+}
+
+a.card {
+	text-decoration: none;
+}
+
+/*taille photo & photo liens*/
+.formPhoto {
+	border-radius: 1rem 1rem 0 0;
+	height: 15rem;
+	background-size: cover;
+}
+
+.card_image1 {
+	background-image: url("../image/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+}
+
+.card_image2 {
+	background-image: url("../image/stil-u2Lp8tXIcjw-unsplash.jpg");
+}
+
+.card_image3 {
+	background-image: url("../image/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+}
+
+.card_image4 {
+	background-image: url("../image/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+}
+
+.card_description h3 p {
+	position: relative;
+	margin-top: 0px;
+	margin: 0px 0px 0px 0px;
+}
+
+.card_description {
+	border-radius: 0px 3px 23px 19px;
+	background-color: white;
+	padding: 1px 0px 1px 20px;
+	margin: 0px 0px 20px 0px;
+	box-shadow: 1px 7px 3px 0px lightgrey;
+}
+
+/*Partie pancarte New ,position forme*/
+p.card_new {
+	position: relative;
+	top: -244px;
+	left: -11px;
+	margin-bottom: -64px
+}
+
+.card_new {
+	top: 20px;
+	right: 20px;
+	width: 100px;
+	padding: 15px;
+	color: #0c6b50;
+	background: #99e2d0;
+	border-radius: 3px;
+	text-align: center;
+	margin-inline-start: auto;
+	align-items: stretch;
+	flex-direction: column;
+	font-weight: bold;
+}
+
+/*Coeur*/
+.heartPosition {
+	display: flex;
+	flex-direction: row-reverse;
+	position: relative;
+	top: -54px;
+	left: -32px;
+}
+
+.btn-heart {
+	border: none;
+	background-color: transparent;
+	width: 45px;
+	height: 34px;
+	cursor: pointer;
+	overflow: hidden;
+	position: relative;
+	float: right;
+}
+
+.btn-heart:focus .empty-heart {
+	transition-duration: 1s;
+	opacity: 0;
+}
+
+.btn-heart:focus .empty-heart {
+	transition-duration: 1s;
+	opacity: 0;
+}
+
+.btn-heart .empty-heart {
+	position: absolute;
+	right: 6px;
+	top: 0px;
+}
+
+.fa-2x {
+	font-size: 2em;
+}
+
+.btn-heart .full-heart {
+	position: absolute;
+	right: 12px;
+	top: 6px;
+	background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	opacity: 0;
+	font-size: 1em;
+}
+
+.btn-heart:hover .full-heart {
+	opacity: 1;
+	font-size: 2em;
+	right: 6px;
+	top: 0px;
+	transition-duration: 0.6s;
+}
+
+.btn-heart:focus .full-heart {
+	opacity: 1;
+	font-size: 2em;
+	right: 6px;
+	top: 0px;
+	transition-duration: 0.6s;
+}
+
+.card_menu .card-body {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 15px;
+}
+
+/*ce qui englobe footer configuration*/
+footer {
+	position: relative;
+	padding: 10px;
+	color: #ffffff;
+	background-color: #2c2c2c;
+	margin-top: 0px;
+	text-shadow: none;
+}
+
+.logomyfood {
+	font-family: 'Shrikhand', cursive;
+	width: 100px;
+	padding-left: 20px;
+}
+
+footer ul {
+	list-style-type: none;
+	margin-left: -30px;
+}
+
+.iconeFood {
+	padding: 10px;
+}
+
+.detailFood {
+	padding-left: 10px;
+}
+
+.email {
+	text-decoration: none;
+	color: white;
+}
+
+/*Page 1234*/
+.header1 {
+	font-family: 'Shrikhand', cursive;
+	text-align: center;
+	padding: 0.3rem
+}
+
+.sizImg {
+	height: 250px;
+	width: 100%;
+	object-fit: cover;
+}
+
+/*coeur Page 1234*/
+.heartPosition1234 {
+	display: flex;
+	flex-direction: row-reverse;
+	position: relative;
+	top: 1px;
+	left: -32px;
+}
+
+.return {
+	display: flex;
+	position: absolute;
+	left: 20px;
+	top: 41px;
+}
+
+/*configuration titre du menu et le coeur*/
+.oneLine {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	transform: translateY(-50px);
+	border-radius: 35px 35px 0 0;
+	background-color: #f3f3f3;
+	margin-bottom: -50px;
+	gap: inherit;
+}
+
+.material-icons {
+	font-family: "material-icons";
+	font-weight: normal;
+	font-style: normal;
+	font-size: 24px;
+	line-height: 1;
+	letter-spacing: normal;
+	text-transform: none;
+	display: inline-block;
+	white-space: nowrap;
+	word-wrap: normal;
+	direction: ltr;
+	font-feature-settings: "liga" 0;
+	-webkit-font-smoothing: antialiased;
+}
+
+/*TITRE entré plat dessert*/
+.surlinetit {
+	border-bottom: 3px solid #99e2d0;
+	width: 5%;
+}
+
+.menuItem {
+	background-color: #fff;
+	display: flex;
+	border-radius: 0.75rem;
+	margin: 1rem 0;
+	box-shadow: 0.25rem 0.25rem 1rem rgb(0 0 0 / 10%);
+	overflow: hidden;
+	width: 90%;
+	max-width: 100%;
+}
+
+.menuItem__header .menuItem__title {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.anim-section1 {
+	animation: animSection 900ms;
+	animation-name: animSection;
+	animation-duration: 900ms;
+	animation-timing-function: ease-in-out;
+	animation-delay: 0s;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	animation-fill-mode: backwards;
+	animation-play-state: running;
+}
+
+.anim-section2 {
+	animation: animSection 1.5s;
+	animation-name: animSection;
+	animation-duration: 1.5s;
+	animation-timing-function: ease;
+	animation-delay: 0s;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	animation-fill-mode: none;
+	animation-play-state: running;
+}
+
+.anim-section3 {
+	animation: animSection 2s;
+	animation-name: animSection;
+	animation-duration: 2s;
+	animation-timing-function: ease;
+	animation-delay: 0s;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	animation-fill-mode: none;
+	animation-play-state: running;
+}
+
+.anim-section4 {
+	animation: animSection 2.2s;
+	animation-name: animSection;
+	animation-duration: 2.2s;
+	animation-timing-function: ease;
+	animation-delay: 0s;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	animation-fill-mode: none;
+	animation-play-state: running;
+}
+
+.anim-section5 {
+	animation: animSection 2.4s;
+	animation-name: animSection;
+	animation-duration: 2.4s;
+	animation-timing-function: ease;
+	animation-delay: 0s;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	animation-fill-mode: none;
+	animation-play-state: running;
+}
+
+.anim-section6 {
+	animation: animSection 2.6s;
+	animation-name: animSection;
+	animation-duration: 2.6s;
+	animation-timing-function: ease;
+	animation-delay: 0s;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	animation-fill-mode: none;
+	animation-play-state: running;
+}
+
+.anim-section7 {
+	animation: animSection 2.7s;
+	animation-name: animSection;
+	animation-duration: 2.7s;
+	animation-timing-function: ease;
+	animation-delay: 0s;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	animation-fill-mode: none;
+	animation-play-state: running;
+}
+
+.anim-section8 {
+	animation: animSection 2.8s;
+	animation-name: animSection;
+	animation-duration: 2.8s;
+	animation-timing-function: ease;
+	animation-delay: 0s;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	animation-fill-mode: none;
+	animation-play-state: running;
+}
+
+.anim-section9 {
+	animation: animSection 2.9s;
+	animation-name: animSection;
+	animation-duration: 2.9s;
+	animation-timing-function: ease;
+	animation-delay: 0s;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	animation-fill-mode: none;
+	animation-play-state: running;
+}
+
+@keyframes anim-Section {
+	0% {
+		transform: translateY(50%);
+		opacity: 0;
+	}
+
+	25% {
+		opacity: 0;
+	}
+
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+/*Configuration du titre du plat Police décriture*/
+.titulo {
+	padding: 5px;
+	overflow: hidden;
+	width: 90%;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.menutitre {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-top: 7px;
+	margin-bottom: 7px;
+}
+
+.whriteBold {
+	font-weight: bold;
+	margin-top: 5px;
+	margin-bottom: -12px;
+}
+
+/*prix du plat configuration*/
+.prixduplat {
+	width: 20%;
+}
+
+.price {
+	padding: 25px;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	transform: translateX(0px);
+}
+
+/*configuration du tchek*/
+.tchek {
+	transform: translateX(100px);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: all linear 750ms;
+	width: 0;
+	background-color: #99e2d0;
+}
+
+.confirmationIcon {
+	transform: rotate(0deg);
+	transition: all linear 750ms 375ms;
+	color: white;
+}
+
+.menuItem__confirmation {
+	background-color: #99e2d0;
+	margin: -1rem -5rem -1rem 1rem;
+	width: 4rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition-duration: .5s;
+}
+
+.menuItem:hover .menuItem__confirmation {
+	margin-right: -1rem;
+}
+
+.menuItem__wrapIcon {
+	height: 1.6rem;
+	width: 1.6rem;
+	background-color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 100px;
+	transform: rotate(180deg);
+	transition-duration: .5s;
+}
+
+.menuItem:hover .menuItem__wrapIcon {
+	transform: rotate(0);
+}
+
+.menuItem:hover .prixduplat {
+	width: 25px;
+}
+
+.menuItem:hover .tchek {
+	transform: translateX(100px);
+	width: 200px;
+	margin: -1rem -1rem -1rem -1rem;
+	margin-right: 6rem;
+	width: 8rem;
+}
+
+.menuItem:hover .tchek .confirmationIcon {
+	transform: rotate(360deg);
+}
+
+.fa-circle-check {
+	position: relative;
+	bottom: 32px;
+	transition-duration: 1s;
+}
+
+.fa-circle-check:hover {
+	transform: rotate(360deg);
+	bottom: 0;
+}
+
+.fa-check:before {
+	content: "\f00c";
+}
+
+/*partie button commander*/
+.deskopCom {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.Clik {
+	color: white;
+	font-weight: 300;
+	font-size: 1.5rem;
+	padding: 1rem 2rem;
+	border: none;
+	border-radius: 2rem;
+	box-shadow: 2px 1px 7px -3px black;
+	background-image: linear-gradient(rgba(225, 121, 218, 0.9), rgba(147, 86, 220, 0.9));
+	transition: transform 200ms;
+	margin-top: 20px;
+	display: block;
+	margin: auto;
+	text-align: center;
+	max-width: min-content;
+	margin-bottom: 20px;
+	font-family: 'Roboto', sans-serif;
+}
+
+.Clik:hover {
+	opacity: 0.9;
+	cursor: pointer;
+	animation: mou 0.6s ease-in-out 0.05s 1 forwards;
+}
+
+/*Apparition progressive des menus*/
+.bouffe {
+	margin: 25px 0 0 0;
+	padding: 0;
+	background-color: #FAFAFA;
+	-webkit-animation: flou 2s linear 0s forwards;
+	animation: flou 2s linear 0s forwards;
+}
+
+.bouffe__entrée--choix {
+	width: 93vw;
+	height: 68px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-transform: translateY(10px);
+	-ms-transform: translateY(10px);
+	transform: translateY(10px);
+}
+
+.assiette--one {
+	-webkit-animation: flou 0.6s linear 0.8s forwards;
+	animation: flou 0.6s linear 0.8s forwards;
+}
+
+.essaie1:nth-child(1) {
+	animation: colle 1.2s ease-in-out forwards;
+}
+
+.essaie1:nth-child(2) {
+	animation: colle 2.4s ease-in-out forwards;
+}
+
+.essaie1:nth-child(3) {
+	animation: colle 3.6s ease-in-out forwards;
+}
+
+.essaie1:nth-child(4) {
+	animation: colle 4.8s ease-in-out forwards;
+}
+
+.essaie1:nth-child(5) {
+	animation: colle 6s ease-in-out forwards;
+}
+
+.essaie1:nth-child(6) {
+	animation: colle 7.2s ease-in-out forwards;
+}
+
+.essaie1:nth-child(7) {
+	animation: colle 8.4s ease-in-out forwards;
+}
+
+.essaie1:nth-child(8) {
+	animation: colle 9.6s ease-in-out forwards;
+}
+
+.essaie1:nth-child(9) {
+	animation: colle 10.8s ease-in-out forwards;
+}
+
+.essaie1:nth-child(10) {
+	animation: colle 11s ease-in-out forwards;
+}
+
+
+@keyframes colle {
+	0% {
+		-webkit-transform: translateY(50px);
+		transform: translateY(50px);
+	}
+
+	50% {
+		-webkit-transform: translateY(50px);
+		transform: translateY(50px);
+	}
+
+	100% {
+		-webkit-transform: translateY(0px);
+		transform: translateY(0px);
+	}
+}
+
+@keyframes flou {
+	0% {
+		opacity: 0;
+	}
+
+	30% {
+		opacity: 0;
+	}
+
+	60% {
+		opacity: 0.6;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+/*Tablet Query*/
+@media only screen and (min-width: 481px) and (max-width:768px) {
+	.surlinetit {
+		width: 9%;
+	}
+    .btn-heart {
+        border: none;
+        background-color: transparent;
+        width: 45px;
+        height: 34px;
+        cursor: pointer !important;
+        overflow: hidden;
+        position: relative;
+        float: right;
+    }
+
+    .btn-heart:focus .empty-heart {
+        transition-duration: 1s;
+        opacity: 0;
+    }
+
+    .btn-heart:focus .empty-heart {
+        transition-duration: 1s;
+        opacity: 0;
+    }
+
+    .btn-heart .empty-heart {
+        position: absolute;
+        right: 6px;
+        top: 0px;
+    }
+
+    .fa-2x {
+        font-size: 2em;
+    }
+
+    .btn-heart .full-heart {
+        position: absolute;
+        right: 6px;
+        top: 0px;
+        background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        opacity: 0;
+        font-size: 2em;
+    }
+
+    .btn-heart:hover .full-heart {
+        opacity: 1;
+        font-size: 2em;
+        right: 6px;
+        top: 0px;
+        transition-duration: 0.6s;
+    }
+
+    .btn-heart:focus .full-heart {
+        opacity: 1;
+        font-size: 2em;
+        right: 6px;
+        top: 0px;
+        transition-duration: 0.6s;
+    }
+
+    .card_menu .card-body {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 15px;
+    }
+}
+
+
+
+/*Mobile Query*/
+@media only screen and (max-width:480px) {
+	.menuList {
+		display: inherit;
+	}
+
+	.surlinetit {
+		width: 15%;
+	}
+    .btn-heart {
+        border: none;
+        background-color: transparent;
+        width: 45px;
+        height: 34px;
+        cursor: pointer !important;
+        overflow: hidden;
+        position: relative;
+        float: right;
+    }
+
+    .btn-heart:focus .empty-heart {
+        transition-duration: 1s;
+        opacity: 0;
+    }
+
+    .btn-heart:focus .empty-heart {
+        transition-duration: 1s;
+        opacity: 0;
+    }
+
+    .btn-heart .empty-heart {
+        position: absolute;
+        right: 6px;
+        top: 0px;
+    }
+
+    .fa-2x {
+        font-size: 2em;
+    }
+
+    .btn-heart .full-heart {
+        position: absolute;
+        right: 6px;
+        top: 0px;
+        background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        opacity: 0;
+        font-size: 2em;
+    }
+
+    .btn-heart:hover .full-heart {
+        opacity: 1;
+        font-size: 2em;
+        right: 6px;
+        top: 0px;
+        transition-duration: 0.6s;
+    }
+
+    .btn-heart:focus .full-heart {
+        opacity: 1;
+        font-size: 2em;
+        right: 6px;
+        top: 0px;
+        transition-duration: 0.6s;
+    }
+    
+}

@@ -587,7 +587,9 @@ footer ul {
 	text-overflow: ellipsis;
 	overflow: hidden;
 }
-
+.cursorHand {
+	cursor: grab;
+}
 .anim-section1 {
 	animation: animSection 900ms;
 	animation-name: animSection;

@@ -587,9 +587,7 @@ footer ul {
 	text-overflow: ellipsis;
 	overflow: hidden;
 }
-.cursorHand {
-	cursor: grab;
-}
+
 .anim-section1 {
 	animation: animSection 900ms;
 	animation-name: animSection;
@@ -702,6 +700,7 @@ footer ul {
 	0% {
 		transform: translateY(50%);
 		opacity: 0;
+
 	}
 
 	25% {
@@ -864,6 +863,7 @@ footer ul {
 	background-color: #FAFAFA;
 	-webkit-animation: flou 2s linear 0s forwards;
 	animation: flou 2s linear 0s forwards;
+	cursor: grab;
 }
 
 .bouffe__entrée--choix {
